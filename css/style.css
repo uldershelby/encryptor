@@ -330,6 +330,7 @@ body {
     height: 40rem;
     color: var(--var-bluedark);
     background-color: var(--var-bluelight);
+    resize: none;
   }
 
   .main-content textarea:focus {
