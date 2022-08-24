@@ -1,0 +1,461 @@
+/*
+   Encryptor Challenge - ALLURA & ORACLE ONE, 2022
+   Student: MEDONE, NICOLAS ADRIAN
+   Group: 3
+
+   nmedone@gmail.com
+   uldershelby.github.com
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  --var-dark: rgb(20, 20, 20);
+  --var-light: rgb(255, 255, 255);
+  --var-grey: rgb(122, 119, 119);
+  --var-bluelight: rgba(243, 245, 252, 1);
+  --var-bluedark: rgb(10, 56, 113);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: var(--var-bluelight);
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 0.2fr 1.3fr 1.3fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "sidebar-left main-content result"
+    "sidebar-right";
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  text-align: center;
+}
+
+.sidebar-left {
+  grid-area: sidebar-left;
+  background-color: var(--var-bluelight);
+}
+
+.main-content {
+  grid-area: main-content;
+  background-color: var(--var-bluelight);
+}
+
+.sidebar-right {
+  grid-area: sidebar-right;
+  background-color: var(--var-bluelight);
+}
+
+@media only screen and (min-width: 23.4375rem) and (max-width: 47.9375rem) {
+  .container {
+    display: grid;
+    grid-auto-flow: dense;
+    grid-auto-rows: 1fr;
+    /* grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr)); */
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 2fr 1fr;
+    grid-template-areas:
+      "sidebar-left"
+      "main-content"
+      "sidebar-right";
+  }
+
+  .sidebar-left {
+    padding: 1.5rem 20.4375rem 1.5rem 1rem;
+  }
+
+  .main-content textarea {
+    border: 0;
+    font-size: 2rem;
+    font-weight: 400;
+    height: 45vh;
+    width: 21.4375rem;
+    color: var(--var-bluedark);
+    background-color: var(--var-bluelight);
+  }
+
+  .main-content textarea:focus {
+    outline: none;
+  }
+
+  ::placeholder {
+    color: var(--var-bluedark);
+    opacity: 1;
+  }
+
+  .sidebar-right {
+    font-size: 0.875rem;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .exceptions {
+    text-align: inherit;
+    font-size: inherit;
+  }
+
+  .sidebar-right svg {
+    vertical-align: middle;
+    gap: 0.5rem;
+  }
+
+  .enc-btn-container {
+    padding-top: 1.5rem;
+  }
+
+  .dec-btn-container {
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+  }
+
+  .encrypt-btn,
+  .decrypt-btn,
+  .copy-btn {
+    /* removes rectangle and bg from svg buttons */
+    border: none !important;
+    background-color: transparent !important;
+    outline: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .result {
+    padding: 0 1.5rem 2.5rem 1.5rem;
+    background-color: var(--var-light);
+    box-shadow: 0 1.5rem 2rem -0.5rem rgba(0, 0, 0, 0.08);
+    border-radius: 2rem;
+  }
+
+  .txt1 {
+    font-family: "Poppins";
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 2rem 1rem 1rem 1rem;
+    margin: 0;
+    line-height: 1.8125rem;
+    letter-spacing: 0;
+    text-align: center;
+    color: var(--var-dark);
+  }
+
+  .txt2 {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 1rem 2rem 2rem 2rem;
+    margin: 0;
+    line-height: 150%;
+    text-align: center;
+  }
+
+  .txt3 {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+    text-align: inherit;
+    border: none;
+    outline: none;
+    width: 15rem;
+    resize: none;
+  }
+}
+
+@media only screen and (min-width: 47.9375rem) and (max-width: 89.9375rem) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 2fr 1fr;
+    grid-template-areas:
+      "sidebar-left"
+      "main-content"
+      "sidebar-right";
+  }
+
+  .sidebar-left {
+    padding-top: 4.5888rem;
+    padding-right: 43.5569rem;
+    padding-left: 2.5rem;
+  }
+
+  .main-content textarea {
+    padding: 7.25rem 0 0 0;
+    border: 0;
+    font-size: 2rem;
+    font-weight: 400;
+    height: 70vh;
+    width: 43rem;
+    color: var(--var-bluedark);
+    background-color: var(--var-bluelight);
+    resize: none;
+  }
+
+  .main-content textarea:focus {
+    outline: none;
+  }
+
+  ::placeholder {
+    color: var(--var-bluedark);
+    opacity: 1; /* Firefox */
+  }
+
+  .sidebar-right {
+    font-size: 0.875rem;
+  }
+
+  .sidebar-right svg {
+    vertical-align: middle;
+    gap: 0.5rem;
+  }
+
+  .exceptions {
+    font-size: inherit;
+  }
+
+  .exc-text {
+    margin: 0;
+  }
+
+  .enc-btn-container {
+    display: inline-block;
+    padding: 1rem 0 0 0;
+  }
+
+  .dec-btn-container {
+    display: inline-block;
+    padding: 0;
+  }
+
+  .encrypt-btn,
+  .decrypt-btn,
+  .copy-btn {
+    /* removes rectangle and bg from svg buttons */
+    border: none !important;
+    background-color: transparent !important;
+    outline: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .result {
+    padding: 0 2.5rem 2.5rem 2.5rem;
+    margin: 2rem 1rem 2rem 1rem;
+    background-color: var(--var-light);
+    box-shadow: 0 1.5rem 2rem -0.5rem rgba(0, 0, 0, 0.08);
+    border-radius: 2rem;
+  }
+
+  .txt1 {
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 2rem 1rem 1rem 1rem;
+    margin: 0;
+    line-height: 1.8125rem;
+    letter-spacing: 0.0625rem;
+    text-align: inherit;
+    color: var(--var-dark);
+  }
+
+  .txt2 {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    line-height: 150%;
+    text-align: center;
+  }
+
+  .txt3 {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-align: start;
+    border: none;
+    outline: none;
+    width: 37.5rem;
+    resize: none;
+  }
+
+  .txt3 textarea {
+    font-family: inherit;
+    font-weight: 400;
+    color: var(--var-grey);
+    text-align: start;
+    border: none;
+    outline: none;
+    resize: none;
+    padding: 0 0 2rem 0;
+    resize: none;
+  }
+}
+
+@media only screen and (min-width: 89.9375rem) {
+  .container {
+    grid-template-columns: 0.66fr 3.02fr 1.95fr;
+    grid-template-rows: 1fr;
+    /* grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr)); */
+    grid-template-areas: "sidebar-left main-content sidebar-right";
+  }
+
+  .sidebar-left {
+    padding: 2.5rem 5.625rem 0 5.3125rem;
+    margin: 0;
+    width: 15rem;
+  }
+
+  .main-content {
+    font-size: 0.875rem;
+    margin: 0;
+    padding: 0;
+    width: 42.5rem;
+  }
+
+  .main-content textarea {
+    padding: 10.5rem 0 0 0;
+    margin: 0;
+    border: 0;
+    font-size: 2rem;
+    font-weight: 400;
+    width: 100%;
+    height: 40rem;
+    color: var(--var-bluedark);
+    background-color: var(--var-bluelight);
+  }
+
+  .main-content textarea:focus {
+    outline: none;
+  }
+
+  ::placeholder {
+    color: var(--var-bluedark);
+    opacity: 1; /* Firefox */
+  }
+
+  .sidebar-right {
+    grid-column: 2;
+    grid-row: 2;
+    padding: 0 0 4.5rem 0;
+    margin: 0;
+    font-size: 0.875rem;
+    text-align: center;
+    width: 695px;
+  }
+
+  .sidebar-right svg {
+    vertical-align: middle;
+    gap: 0.5rem;
+  }
+
+  .exceptions {
+    padding: 0rem 0 1rem 0rem;
+    font-size: inherit;
+    text-align: center;
+  }
+
+  .exc-text {
+    margin: 0;
+  }
+
+  .enc-btn-container {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .dec-btn-container {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .encrypt-btn,
+  .decrypt-btn,
+  .copy-btn {
+    /* remove rectangle and bg from svg buttons */
+    border: none !important;
+    background-color: transparent !important;
+    outline: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .result {
+    background-image: url("../img/search.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-row: span 2;
+    width: 29rem;
+    background-color: var(--var-light);
+    box-shadow: 0 1.5rem 2rem -0.5rem rgba(0, 0, 0, 0.08);
+    border-radius: 2rem;
+    margin: 2.5rem 2.5rem 2.5rem 1rem;
+  }
+
+  .txt1 {
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 2rem 1rem 1rem 1rem;
+    line-height: 1.8125rem;
+    letter-spacing: 0.0625rem;
+    text-align: inherit;
+    color: var(--var-dark);
+    overflow-y: scroll;
+    resize: none;
+  }
+
+  .txt2 {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    line-height: 150%;
+    text-align: center;
+  }
+
+  .txt3 {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+    text-align: start;
+    border: none;
+    outline: none;
+    width: 21rem;
+    height: 23.4rem;
+    overflow-y: scroll;
+  }
+
+  .txt3 textarea {
+    font-family: inherit;
+    font-weight: 400;
+    color: var(--var-grey);
+    text-align: start;
+    border: none;
+    outline: none;
+    resize: none;
+    padding: 0 0 2rem 0;
+    resize: none;
+  }
+}
+
+#preloader {
+  background: var(--var-light) url("../img/preloader.gif") no-repeat center
+    center;
+  background-size: 20%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
