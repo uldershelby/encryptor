@@ -26,10 +26,6 @@
 
 //    str.replace(/str1/g, str3).replace(/str2/g, str4)...
 
-var w = window.innerWidth;
-var h = window.innerHeight;
-console.log(w + "." + h);
-
 const objCrypt = { e: "enter", i: "imes", a: "ai", o: "ober", u: "ufat" },
   objDecrypt = { enter: "e", imes: "i", ai: "a", ober: "o", ufat: "u" },
   regExprCrypt = new RegExp(/[eiaou]/g),

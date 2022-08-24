@@ -410,6 +410,8 @@ body {
     text-align: inherit;
     color: var(--var-dark);
     overflow: hidden;
+    -ms-overflow-style: none; /* ie & edge */
+    scrollbar-width: none; /* firefox */
     resize: none;
   }
 
@@ -435,7 +437,13 @@ body {
     width: 21rem;
     height: 23.4rem;
     overflow: hidden;
+    -ms-overflow-style: none; /* ie & edge */
+    scrollbar-width: none; /* firefox */
     resize: none;
+  }
+
+  .txt3::-webkit-scrollbar {
+    display: none; /* chrome, safari & opera */
   }
 
   .txt3 textarea {
@@ -447,7 +455,6 @@ body {
     outline: none;
     resize: none;
     padding: 0 0 2rem 0;
-    overflow: hidden;
     resize: none;
   }
 }
@@ -455,7 +462,7 @@ body {
 #preloader {
   background: var(--var-light) url("../img/preloader.gif") no-repeat center
     center;
-  background-size: 20%;
+  background-size: 15%;
   height: 100vh;
   width: 100%;
   position: fixed;
