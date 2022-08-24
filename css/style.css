@@ -410,9 +410,6 @@ body {
     letter-spacing: 0.0625rem;
     text-align: inherit;
     color: var(--var-dark);
-    overflow: hidden;
-    -ms-overflow-style: none; /* ie & edge */
-    scrollbar-width: none; /* firefox */
     resize: none;
   }
 
