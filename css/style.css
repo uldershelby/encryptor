@@ -436,14 +436,10 @@ body {
     border: none;
     outline: none;
     width: 21rem;
-    height: 20.4rem;
+    height: 21.5rem;
     -ms-overflow-style: none; /* ie & edge */
     scrollbar-width: none; /* firefox */
     resize: none;
-  }
-
-  .txt3::-webkit-scrollbar {
-    display: none; /* chrome, safari & opera */
   }
 
   .txt3 textarea {
@@ -456,6 +452,7 @@ body {
     resize: none;
     padding: 0 0 2rem 0;
     resize: none;
+    overflow-y: scroll;
   }
 }
 
