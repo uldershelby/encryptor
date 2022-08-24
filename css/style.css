@@ -409,7 +409,7 @@ body {
     letter-spacing: 0.0625rem;
     text-align: inherit;
     color: var(--var-dark);
-    overflow-y: scroll;
+    overflow: hidden;
     resize: none;
   }
 
@@ -434,7 +434,7 @@ body {
     outline: none;
     width: 21rem;
     height: 23.4rem;
-    overflow-y: scroll;
+    overflow: hidden;
   }
 
   .txt3 textarea {
