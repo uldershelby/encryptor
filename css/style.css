@@ -437,7 +437,6 @@ body {
     outline: none;
     width: 21rem;
     height: 20.4rem;
-    overflow: hidden;
     -ms-overflow-style: none; /* ie & edge */
     scrollbar-width: none; /* firefox */
     resize: none;
