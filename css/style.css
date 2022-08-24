@@ -435,6 +435,7 @@ body {
     width: 21rem;
     height: 23.4rem;
     overflow: hidden;
+    resize: none;
   }
 
   .txt3 textarea {
@@ -446,6 +447,7 @@ body {
     outline: none;
     resize: none;
     padding: 0 0 2rem 0;
+    overflow: hidden;
     resize: none;
   }
 }
