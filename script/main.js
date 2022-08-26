@@ -123,3 +123,35 @@ window.addEventListener(
   },
   false
 );
+
+var favicon_images = [
+    "img/favicon_frame0.gif",
+    "img/favicon_frame1.gif",
+    "img/favicon_frame2.gif",
+    "img/favicon_frame3.gif",
+    "img/favicon_frame4.gif",
+    "img/favicon_frame5.gif",
+    "img/favicon_frame6.gif",
+  ],
+  image_counter = 0;
+
+setInterval(function () {
+  if (document.querySelector("link[rel='icon']") !== null)
+    document.querySelector("link[rel='icon']").remove();
+  if (document.querySelector("link[rel='shortcut icon']") !== null)
+    document.querySelector("link[rel='shortcut icon']").remove();
+
+  document
+    .querySelector("head")
+    .insertAdjacentHTML(
+      "beforeend",
+      '<link rel="icon" href="' +
+        favicon_images[image_counter] +
+        '" type="image/gif">'
+    );
+
+  // If last image then goto first image
+  // Else go to next image
+  if (image_counter == favicon_images.length - 1) image_counter = 0;
+  else image_counter++;
+}, 200);

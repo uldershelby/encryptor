@@ -24,6 +24,7 @@
 html,
 body {
   background-color: var(--var-bluelight);
+  scroll-behavior: smooth;
 }
 
 .container {
