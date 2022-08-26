@@ -30,8 +30,8 @@
             </svg>
         </section>
         <section class="main-content">
-            <textarea name="text-input" id="main-content" autofocus required
-                placeholder="Ingrese el texto aquí."></textarea>
+            <textarea name="text-input" id="main-content" autofocus required placeholder="Ingrese el texto aquí."
+                onkeyup="this.value = this.value.replace(/[A-Z0-9&*<>!?+=¡¿´|°#$%/(){}áéíóúäëïöü¨\'\\_,;:\[\]~`­­­¸«»@]/g, '')"></textarea>
         </section>
         <section class="sidebar-right">
             <div class="exceptions">
