@@ -66,7 +66,6 @@ body {
       "sidebar-left"
       "main-content"
       "sidebar-right";
-    margin: 0 0 4rem 0;
   }
 
   .sidebar-left {
@@ -180,6 +179,7 @@ body {
   .txt3 textarea {
     resize: none;
     overflow-y: scroll;
+    text-align: start;
   }
 }
 
@@ -191,11 +191,10 @@ body {
       "sidebar-left"
       "main-content"
       "sidebar-right";
-    margin: 0 0 9.2rem 0;
   }
 
   .sidebar-left {
-    padding-top: 4.5888rem;
+    padding-top: 2.5888rem;
     padding-right: 43.5569rem;
     padding-left: 2.5rem;
   }
@@ -290,6 +289,7 @@ body {
   }
 
   .txt3 {
+    display: inline-block;
     font-family: inherit;
     font-weight: 400;
     font-size: 1.5rem;
@@ -298,6 +298,7 @@ body {
     outline: none;
     width: 37.5rem;
     resize: none;
+    padding: 0 0 1.5rem 0;
   }
 
   .txt3 textarea {
@@ -307,7 +308,6 @@ body {
     text-align: start;
     border: none;
     outline: none;
-    resize: none;
     padding: 0 0 2rem 0;
     resize: none;
   }

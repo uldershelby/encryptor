@@ -54,7 +54,7 @@ const objCrypt = { e: "enter", i: "imes", a: "ai", o: "ober", u: "ufat" },
     );
     document.querySelector("#main-content").value;
     document.getElementById("txt1").innerHTML =
-      '<textarea name="result-text" id="txt3">encryptedText</textarea>';
+      '<textarea name="result-text" id="txt3" cols="30" rows="10">encryptedText</textarea>';
     document.getElementById("txt1").className = "txt1";
     document.getElementById("txt2").innerHTML = "";
     document.getElementById("txt3").className = "txt3";
