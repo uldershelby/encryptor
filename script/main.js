@@ -92,7 +92,7 @@ document.getElementById("encrypt-icon").addEventListener(
 
 document.getElementById("decrypt-icon").addEventListener(
   "click",
-  function () {
+  () => {
     decrypt();
   },
   false
@@ -100,7 +100,7 @@ document.getElementById("decrypt-icon").addEventListener(
 
 document.getElementById("decrypt-icon").addEventListener(
   "click",
-  function () {
+  () => {
     let element = document.getElementById("copy-icon");
     let hidden = element.getAttribute("hidden");
     document.getElementById("result").style.backgroundImage = "none";
@@ -115,9 +115,9 @@ document.getElementById("decrypt-icon").addEventListener(
 let loader = document.getElementById("preloader");
 window.addEventListener(
   "load",
-  function (load) {
+  (load) => {
     window.removeEventListener("load", load, false);
-    setTimeout(function () {
+    setTimeout(() => {
       loader.style.display = "none";
     }, 2000);
   },
@@ -135,7 +135,7 @@ var favicon_images = [
   ],
   image_counter = 0;
 
-setInterval(function () {
+setInterval(() => {
   if (document.querySelector("link[rel='icon']") !== null)
     document.querySelector("link[rel='icon']").remove();
   if (document.querySelector("link[rel='shortcut icon']") !== null)
