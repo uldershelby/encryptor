@@ -64,11 +64,9 @@ body {
   }
 }
 
-@media only screen and (min-width: 15.625rem) and (max-width: 47.9375rem) {
+@media only screen and (min-width: 23.4375rem) and (max-width: 47.9375rem) {
   .container {
     display: grid;
-    grid-auto-flow: dense;
-    grid-auto-rows: 1fr;
     /* grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr)); */
     grid-template-columns: 1fr;
     grid-template-rows: 0.2fr 2fr 1fr;
