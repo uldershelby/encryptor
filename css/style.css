@@ -66,7 +66,7 @@ body {
   }
 }
 
-@media all and (min-width: 15.625rem) and (max-width: 47.9375rem) {
+@media screen and (min-width: 15.625rem) and (max-width: 47.9375rem) {
   .container {
     display: grid;
     /* grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr)); */
