@@ -74,9 +74,9 @@ body {
       "sidebar-left"
       "main-content"
       "sidebar-right";
+    grid-auto-flow: dense;
     padding: 0;
     margin: 0;
-    overflow: hidden;
   }
 
   .sidebar-left {
