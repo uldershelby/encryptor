@@ -38,6 +38,8 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 800;
   text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 .sidebar-left {
@@ -74,9 +76,6 @@ body {
       "sidebar-left"
       "main-content"
       "sidebar-right";
-    grid-auto-flow: dense;
-    padding: 0;
-    margin: 0;
   }
 
   .sidebar-left {
