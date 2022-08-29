@@ -76,6 +76,7 @@ body {
       "sidebar-right";
     padding: 0;
     margin: 0;
+    overflow: hidden;
   }
 
   .sidebar-left {
