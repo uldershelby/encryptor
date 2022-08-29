@@ -204,7 +204,7 @@ body {
   }
 }
 
-@media all and (min-width: 48rem) and (max-width: 89.9375rem) {
+@media screen and (min-width: 48rem) and (max-width: 89.9375rem) {
   .container {
     grid-template-columns: 1fr;
     grid-template-rows: 0.3fr 2fr 1fr;
@@ -351,7 +351,7 @@ body {
   }
 }
 
-@media all and (min-width: 90rem) {
+@media screen and (min-width: 90rem) {
   .container {
     grid-template-columns: 0.66fr 3.02fr 1.95fr;
     grid-template-rows: 1fr;
