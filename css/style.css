@@ -15,6 +15,8 @@
   --var-grey: rgb(122, 119, 119);
   --var-bluelight: rgba(243, 245, 252, 1);
   --var-bluedark: rgb(10, 56, 113);
+  touch-action: pan-x pan-y;
+  height: 100%;
 }
 
 * {
